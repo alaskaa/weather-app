@@ -38,3 +38,7 @@ p {
 .hider {
   visibility: hidden;
 }
+
+.slider-font {
+  font-family: Dosis, sans-serif;
+}

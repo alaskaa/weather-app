@@ -25,7 +25,7 @@ function showPosition(position) {
   latitude = position.coords.latitude;
   longitude = position.coords.longitude;
 
-  //fetch('https://fcc-weather-api.glitch.me/api/current?lat='+latitude+'&lon='+longitude)
+
   fetch('https://api.openweathermap.org/data/2.5/weather?lat='+latitude+'&lon='+longitude+'&APPID=d0769cf4ca29e4fed1db6a1803334822')
     .then(function(r) {
          return r.json();
@@ -47,12 +47,8 @@ function showPosition(position) {
         $("span").on("click",function() {
 				toggleC = !toggleC;
 			    if (toggleC) {
-					//$("#weather-degrees").html(tempF + "&deg;F");
-					//$("#switch-temp--text").html("Fahrenheit");
           document.getElementById('temp').innerText = celsius.toString() + "\u00B0" + "C";
 				  } else {
-					//$("#weather-degrees").html(tempC + "&deg;C");
-					//$("#switch-temp--text").html("Celsius");
           document.getElementById('temp').innerText = fahrenheit.toString() + "\u00B0" + "F";
           }
         });
